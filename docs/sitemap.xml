@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/404.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/teachCovidData.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/index.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/reference/new_cases_state.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/reference/plot.tcov_deltaconf_daily_state.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/reference/s2p_get_cache.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/reference/usafacts_confirmed.html</loc>
+  </url>
+</urlset>

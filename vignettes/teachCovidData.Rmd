@@ -1,0 +1,60 @@
+---
+title: "teachCovidData - overview"
+author: "Vincent J. Carey, stvjc at channing.harvard.edu"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{teachCovidData - overview}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+```{r setup, echo=FALSE, results="hide"}
+suppressMessages({
+suppressPackageStartupMessages({
+library(teachCovidData)
+library(ggplot2)
+})
+})
+```
+
+# Introduction
+
+We will assemble some data and analyses of COVID-19 data
+using R.
+
+# Basic data resource
+
+```{r lk0}
+library(teachCovidData)
+dat = usafacts_confirmed()
+dat[1:5,1:6]
+```
+
+# Examining new daily case counts by state
+
+```{r lk1}
+library(ggplot2)
+ncms = new_cases_state("MS")
+plot(ncms)
+```
+
+```{r lk2}
+nn = new_cases_state("VT")
+plot(nn)
+```
+
+Use dplyr to filter by date.
+```{r lk3}
+library(dplyr)
+nnn = nn |> filter(date > "2021-01-01" & date < "2021-06-01")
+plot(nnn)
+```
+
+Make the comparable plot for MS.
+
