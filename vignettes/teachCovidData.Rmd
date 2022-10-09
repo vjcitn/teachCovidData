@@ -28,6 +28,16 @@ library(ggplot2)
 We will assemble some data and analyses of COVID-19 data
 using R.
 
+## Installation
+
+You can install this package in R with the following steps.
+
+- ensure that you are using R 4.1 or later
+- `install.packages("BiocManager")`
+- `BiocManager::install(c("remotes", "vjcitn/teachCovidData"))`
+
+
+
 # Basic data resource
 
 ```{r lk0}
