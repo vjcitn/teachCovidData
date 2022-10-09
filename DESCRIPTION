@@ -1,6 +1,6 @@
 Package: teachCovidData
 Title: Resources for working with public data on the COVID-19 pandemic
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: 
     c(person(
         "Vincent", "Carey", role = c("aut", "cre"),
@@ -13,7 +13,7 @@ Encoding: UTF-8
 Depends: R (>= 4.1), dplyr, BiocFileCache, lubridate, ggplot2
 Imports:
     methods
-Suggests: knitr, testthat
+Suggests: knitr, testthat, BiocStyle
 LazyData: true
 VignetteBuilder: knitr
 biocViews: Infrastructure
