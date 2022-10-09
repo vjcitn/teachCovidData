@@ -6,6 +6,13 @@
 \usage{
 \method{plot}{tcov_deltaconf_daily_state}(x, y, ...)
 }
+\arguments{
+\item{x}{instance of tcov_deltaconf_daily_state}
+
+\item{y}{not used}
+
+\item{\dots}{not used}
+}
 \description{
 plot daily new cases for a state
 }

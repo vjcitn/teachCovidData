@@ -1,4 +1,5 @@
 #' get confirmed COVID-19 cases from USAfacts.org
+#' @importFrom utils read.csv
 #' @param update logical(1) if TRUE will download the data, otherwise use (or populate then use) cache
 #' @examples
 #' cc = usafacts_confirmed() # confirmed cases by county
@@ -25,6 +26,7 @@ usafacts_confirmed = function(update=FALSE) {
 #' Assemble new cases by state
 #' @param statecode character(1)
 #' @import dplyr
+#' @import lubridate
 #' @examples
 #' ncms = new_cases_state("MS")
 #' plot(ncms)
@@ -33,6 +35,7 @@ new_cases_state = function(statecode) {
    cc = usafacts_confirmed() # confirmed cases by county
    avail_states = unique(cc$State)
    stopifnot(statecode %in% avail_states)
+   State <- NULL
    Sdata = cc |> dplyr::filter(State==statecode)
    dates = lubridate::as_date(names(Sdata[-c(1:4)]))
    cumulative = apply(Sdata[,-c(1:4)],2,sum)
@@ -48,7 +51,11 @@ new_cases_state = function(statecode) {
 
 #' plot daily new cases for a state
 #' @import ggplot2
+#' @param x instance of tcov_deltaconf_daily_state
+#' @param y not used
+#' @param \dots not used
 #' @export
 plot.tcov_deltaconf_daily_state = function(x, y, ...) {
+ incid <- NULL
  ggplot(x, aes(x=date, y=incid)) + geom_point() + ggtitle(paste("Daily new confirmed cases for", x$state[1]))
 }
