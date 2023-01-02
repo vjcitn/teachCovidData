@@ -16,7 +16,7 @@ License: Artistic-2.0
 Encoding: UTF-8
 Depends: R (>= 4.1), dplyr, BiocFileCache, lubridate, ggplot2
 Imports: utils
-Suggests: knitr, testthat, BiocStyle, magick
+Suggests: knitr, testthat, BiocStyle, magick, DT, jsonlite
 LazyData: true
 VignetteBuilder: knitr
 biocViews: Infrastructure
