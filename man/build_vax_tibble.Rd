@@ -14,7 +14,7 @@ build_vax_tibble(csvpath)
 produce a tibble with CDC vaccine data
 }
 \examples{
-path_12_29 = system.file("cdc/COVID-19_Vaccinations_in_the_United_States_Jurisdiction.csv",
-  package="teachCovidData")
+path_12_29 = gzfile(system.file("cdc/COVID-19_Vaccinations_in_the_United_States_Jurisdiction.csv.gz",
+  package="teachCovidData"))
 build_vax_tibble(path_12_29)  # retrieved 12/29, data to 12/22
 }

@@ -4,8 +4,8 @@
 #' @param csvpath character(1) path to CSV as distributed at 
 #' `https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-Jurisdi/unsk-b7fc`
 #' @examples
-#' path_12_29 = system.file("cdc/COVID-19_Vaccinations_in_the_United_States_Jurisdiction.csv",
-#'   package="teachCovidData")
+#' path_12_29 = gzfile(system.file("cdc/COVID-19_Vaccinations_in_the_United_States_Jurisdiction.csv.gz",
+#'   package="teachCovidData"))
 #' build_vax_tibble(path_12_29)  # retrieved 12/29, data to 12/22
 #' @export
 build_vax_tibble = function(csvpath) {
