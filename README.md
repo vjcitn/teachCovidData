@@ -12,4 +12,13 @@ A concept map of a full course:
 
 ![COVID-19 data science concept map](man/figures/covidcoggle.jpg)
 
+Important topics are not addressed, but comments and pull requests are welcome;
+see the [issues tracker](https://github.com/vjcitn/teachCovidData/issues).
+It would be very nice to have modules on
+
+- mobility measures related to incidence variation
+- environmental measures of population load, such as wastewater monitoring results
+- types and effects of non-pharmacologic interventions
+- elaborations of elements on data publication and education in international contexts
+
 See the "get started" link on the vjcitn.github.io/teachCovidData site for current details.
