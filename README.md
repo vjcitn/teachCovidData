@@ -1,6 +1,8 @@
 # teachCovidData
 
-R package for getting familiar with COVID-19 data resources and their use
+This R package for getting familiar with COVID-19 data resources and their use was
+inspired by work of Dr. Latrice Landry related to the 
+[NIH Covid Community Engagement Alliance (CEAL)](https://covid19community.nih.gov/).
 
 Learning objectives
 
