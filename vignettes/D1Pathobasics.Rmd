@@ -1,0 +1,20 @@
+
+---
+title: "D1 Pathogen evolution: basic concepts"
+author: 'Vincent J. Carey, stvjc at channing.harvard.edu'
+date: '`r Sys.Date()`'
+output:
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{D1 Pathogen evolution: basic concepts}
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+# Introduction
+
+[Add material]
+

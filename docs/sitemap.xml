@@ -4,6 +4,51 @@
     <loc>https://vjcitn.github.io/teachCovidData/404.html</loc>
   </url>
   <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/A1websites.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/A2downloads.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/A3dictionaries.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/B1Inftiming.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/B2InfGeo.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/B3InfDemog.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/C1Vacctypes.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/C2Vacctiming.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/C3VaccDemog.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/D1Pathobasics.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/D2GSAIDdata.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/D3VOC.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/E1SeroEpi.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/E2VacTrials.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/articles/E3CorrProt.html</loc>
+  </url>
+  <url>
     <loc>https://vjcitn.github.io/teachCovidData/articles/index.html</loc>
   </url>
   <url>
@@ -14,6 +59,9 @@
   </url>
   <url>
     <loc>https://vjcitn.github.io/teachCovidData/index.html</loc>
+  </url>
+  <url>
+    <loc>https://vjcitn.github.io/teachCovidData/reference/build_vax_tibble.html</loc>
   </url>
   <url>
     <loc>https://vjcitn.github.io/teachCovidData/reference/index.html</loc>

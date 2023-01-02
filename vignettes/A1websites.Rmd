@@ -1,0 +1,27 @@
+---
+title: "A1 Using 'websites' to present information on COVID-19"
+author: "Vincent J. Carey, stvjc at channing.harvard.edu"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{A1 Using "websites" to present information on COVID-19}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+```{r setup, echo=FALSE, results="hide"}
+suppressMessages({
+suppressPackageStartupMessages({
+library(teachCovidData)
+library(ggplot2)
+})
+})
+```
+
+# Introduction
+

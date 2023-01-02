@@ -1,9 +1,24 @@
 pandoc: '2.5'
-pkgdown: 2.0.6
+pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
+  A1websites: A1websites.html
+  A2downloads: A2downloads.html
+  A3dictionaries: A3dictionaries.html
+  B1Inftiming: B1Inftiming.html
+  B2InfGeo: B2InfGeo.html
+  B3InfDemog: B3InfDemog.html
+  C1Vacctypes: C1Vacctypes.html
+  C2Vacctiming: C2Vacctiming.html
+  C3VaccDemog: C3VaccDemog.html
+  D1Pathobasics: D1Pathobasics.html
+  D2GSAIDdata: D2GSAIDdata.html
+  D3VOC: D3VOC.html
+  E1SeroEpi: E1SeroEpi.html
+  E2VacTrials: E2VacTrials.html
+  E3CorrProt: E3CorrProt.html
   teachCovidData: teachCovidData.html
-last_built: 2022-10-09T16:58Z
+last_built: 2023-01-02T11:14Z
 urls:
   reference: https://vjcitn.github.io/teachCovidData/reference
   article: https://vjcitn.github.io/teachCovidData/articles

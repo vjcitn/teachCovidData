@@ -1,13 +1,17 @@
 Package: teachCovidData
 Title: Resources for working with public data on the COVID-19 pandemic
-Version: 0.0.4
+Version: 0.0.6
 Authors@R: 
     c(person(
-        "Vincent", "Carey", role = c("aut", "cre"),
+        given="Vincent", family="Carey", role = c("aut", "cre"),
         email = "stvjc@channing.harvard.edu",
-        comment = c(ORCID = "0000-0003-4046-0063"))
+        comment = c(ORCID = "0000-0003-4046-0063")),
+      person(given="Sean", family="Davis", role = c("aut"),
+        email = 'seandavi@gmail.com',
+        comment = c('ORCID'="0000-0002-8991-6458"))
      )
 Description: Provide resources for working with public data on the COVID-19 pandemic.
+	The code base includes work from Sean Davis' sars2pack.
 License: Artistic-2.0
 Encoding: UTF-8
 Depends: R (>= 4.1), dplyr, BiocFileCache, lubridate, ggplot2
@@ -16,6 +20,6 @@ Suggests: knitr, testthat, BiocStyle
 LazyData: true
 VignetteBuilder: knitr
 biocViews: Infrastructure
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 URL: http://github.com/vjcitn/teachCovidData
 BugReports: http://github.com/vjcitn/teachCovidData/issues

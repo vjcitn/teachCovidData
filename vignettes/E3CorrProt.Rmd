@@ -1,0 +1,20 @@
+
+---
+title: "E3 Defining vaccine protection"
+author: 'Vincent J. Carey, stvjc at channing.harvard.edu'
+date: '`r Sys.Date()`'
+output:
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{E3 Defining vaccine protection}
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+# Introduction
+
+[Add material]
+

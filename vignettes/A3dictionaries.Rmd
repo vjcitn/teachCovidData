@@ -1,0 +1,20 @@
+
+---
+title: "A3 Dictionaries and metadata on COVID-19 resources"
+author: 'Vincent J. Carey, stvjc at channing.harvard.edu'
+date: '`r Sys.Date()`'
+output:
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{A3 Dictionaries and metadata on COVID-19 resources}
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+# Introduction
+
+[Add material]
+

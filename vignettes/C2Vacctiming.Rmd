@@ -1,0 +1,20 @@
+
+---
+title: "C2 US Vaccination timing/geography"
+author: 'Vincent J. Carey, stvjc at channing.harvard.edu'
+date: '`r Sys.Date()`'
+output:
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{C2 US Vaccination timing/geography}
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+# Introduction
+
+[Add material]
+

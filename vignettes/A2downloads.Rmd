@@ -1,0 +1,27 @@
+---
+title: "A2 Acquiring data on COVID-19 using downloads and 'APIs'"
+author: "Vincent J. Carey, stvjc at channing.harvard.edu"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{A2 Acquiring data on COVID-19 using downloads and 'APIs'}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+```{r setup, echo=FALSE, results="hide"}
+suppressMessages({
+suppressPackageStartupMessages({
+library(teachCovidData)
+library(ggplot2)
+})
+})
+```
+
+# Introduction
+
