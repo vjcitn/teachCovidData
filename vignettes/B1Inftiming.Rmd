@@ -16,5 +16,13 @@ vignette: >
 
 # Introduction
 
+In this section we will work with time series of reports 
+of new cases of COVID-19 infection.
+
+Another time series resource of interest records
+date, place and assigned cause
+[COVID-19 related deaths](https://data.cdc.gov/NCHS/Provisional-COVID-19-Deaths-by-Sex-and-Age/9bhg-hcku).
+At this time we will not be analyzing this data.
+
 [Add material]
 
