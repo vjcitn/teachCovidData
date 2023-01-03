@@ -18,6 +18,7 @@ Depends: R (>= 4.1), dplyr, BiocFileCache, lubridate, ggplot2
 Imports: utils, tibble, readxl, shiny
 Suggests: knitr, testthat, BiocStyle, magick, DT, jsonlite
 LazyData: true
+LazyDataCompression: xz
 VignetteBuilder: knitr
 biocViews: Infrastructure
 RoxygenNote: 7.2.3

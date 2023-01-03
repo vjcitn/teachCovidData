@@ -16,5 +16,17 @@ vignette: >
 
 # Introduction
 
+At the outset of 2023, considerable discussion has arisen
+regarding a SARS-Cov-2 variant called XBB.1.5.
+
+One resource being cited 
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">📝Recap why <a href="https://twitter.com/hashtag/XBB15?src=hash&amp;ref_src=twsrc%5Etfw">#XBB15</a> (storming 🇺🇸&amp;🇬🇧) is a super variant:<br><br>📍among most immunity-evasive ‘escape variants’ to date<br><br>📍one of the best variants for invading human cells via ACE2.<br><br>📍Spreads much faster than old XBB or BQ<br><br>📍Causes ⬆️hospitalizations wherever dominant (NY CT MA NJ)🧵 <a href="https://t.co/n655wzvEHw">pic.twitter.com/n655wzvEHw</a></p>&mdash; Eric Feigl-Ding (@DrEricDing) <a href="https://twitter.com/DrEricDing/status/1609320112582021120?ref_src=twsrc%5Etfw">December 31, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+is a tool for modeling
+how mutations to the virus facilitate immune escape.
+The calculator is [here](https://jbloomlab.github.io/SARS2_RBD_Ab_escape_maps/escape-calc/)
+and the relevant paper is [here](https://doi.org/10.1093/ve/veac021).
+
 [Add material]
 
