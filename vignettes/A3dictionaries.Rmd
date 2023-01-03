@@ -16,5 +16,46 @@ vignette: >
 
 # Introduction
 
-[Add material]
+Data representation often involves various levels
+of explicitness.  A "variable name" is a short
+token that can be used in programming to
+refer to some quantity or outcome or event of interest.
 
+A data dictionary maps variable names to more
+explicit definitions of quantities, outcomes, events,
+and may include more information on context of
+measurement.
+
+# Example: CDC's data dictionary on vaccination trends
+
+We have included a version of a CDC data dictionary.
+It is published as a multisheet Excel workbook.
+
+Code to retrieve the names of the sheets, using `excel_sheets`:
+```{r lkdd1, message=FALSE}
+library(readxl)
+pa = system.file("cdc/VACCDataDictionary_v36_12082022.xlsx", package="teachCovidData")
+shn = excel_sheets(pa)
+shn
+```
+
+The first sheet is an overview:
+```{r lkdd2, message=FALSE}
+p1 = read_xlsx(pa, 1)
+knitr::kable(head(as.data.frame(p1)))
+```
+
+We process all sheets using `process_datadict`:
+```{r lkdd3,message=FALSE}
+library(teachCovidData)
+pd = process_datadict(pa)
+```
+
+An interactive view of the second sheet:
+```{r lkdd4,message=FALSE}
+library(DT)
+datatable(pd[[2]])
+```
+
+To survey the dictionary in R, use `datadict_app(pd)` after
+performing the calculations above, or with `example(datadict_app)`.
