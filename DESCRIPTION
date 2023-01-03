@@ -15,7 +15,7 @@ Description: Provide resources for working with public data on the COVID-19 pand
 License: Artistic-2.0
 Encoding: UTF-8
 Depends: R (>= 4.1), dplyr, BiocFileCache, lubridate, ggplot2
-Imports: utils, tibble, readxl
+Imports: utils, tibble, readxl, shiny
 Suggests: knitr, testthat, BiocStyle, magick, DT, jsonlite
 LazyData: true
 VignetteBuilder: knitr
