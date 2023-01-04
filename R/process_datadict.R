@@ -3,6 +3,7 @@
 #' @param path character(1) path to xlsx file with data dictionary in several sheets
 #' @param quiet logical(1) if TRUE (default) suppress messages about column names from read_xlsx
 #' @param simplify_names logical(1) if TRUE (default) remove inessential elements of sheet names
+#' @note Original xlsx file retrieved from \url{https://data.cdc.gov/api/views/unsk-b7fc/files/bfb13090-4148-4f48-9d5a-e1d1c2fb93b3?download=true&filename=DataDictionary_v36_12082022.xlsx} in early 2023.
 #' @return list of data.frames
 #' @examples
 #' pa = system.file("cdc/VACCDataDictionary_v36_12082022.xlsx", package="teachCovidData")
@@ -26,7 +27,7 @@ process_datadict = function(path, quiet=TRUE, simplify_names=TRUE) {
 
 #' produce shiny app from processed data dictionary
 #' @import shiny
-#' @param pd output of `process_datadict`
+#' @param pd output of \code{\link{process_datadict}}
 #' @examples
 #' if (interactive()) {
 #'  pa = system.file("cdc/VACCDataDictionary_v36_12082022.xlsx", package="teachCovidData")

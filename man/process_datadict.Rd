@@ -19,6 +19,9 @@ list of data.frames
 \description{
 produce tables from xlsx data dictionary
 }
+\note{
+Original xlsx file retrieved from \url{https://data.cdc.gov/api/views/unsk-b7fc/files/bfb13090-4148-4f48-9d5a-e1d1c2fb93b3?download=true&filename=DataDictionary_v36_12082022.xlsx} in early 2023.
+}
 \examples{
 pa = system.file("cdc/VACCDataDictionary_v36_12082022.xlsx", package="teachCovidData")
 pd = process_datadict(pa)

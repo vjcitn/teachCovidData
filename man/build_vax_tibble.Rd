@@ -8,7 +8,7 @@ build_vax_tibble(csvpath)
 }
 \arguments{
 \item{csvpath}{character(1) path to CSV as distributed at 
-`https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-Jurisdi/unsk-b7fc`}
+\url{https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-Jurisdi/unsk-b7fc}}
 }
 \description{
 produce a tibble with CDC vaccine data

@@ -7,7 +7,7 @@
 datadict_app(pd)
 }
 \arguments{
-\item{pd}{output of `process_datadict`}
+\item{pd}{output of \code{\link{process_datadict}}}
 }
 \description{
 produce shiny app from processed data dictionary
