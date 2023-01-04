@@ -123,7 +123,7 @@
       <h1 data-toc-skip>B1 US Infection reports: timing</h1>
                         <h4 data-toc-skip class="author">Vincent J. Carey, stvjc at channing.harvard.edu</h4>
             
-            <h4 data-toc-skip class="date">2023-01-03</h4>
+            <h4 data-toc-skip class="date">2023-01-04</h4>
       
       <small class="dont-index">Source: <a href="http://github.com/vjcitn/teachCovidData/blob/HEAD/vignettes/B1Inftiming.Rmd" class="external-link"><code>vignettes/B1Inftiming.Rmd</code></a></small>
       <div class="hidden name"><code>B1Inftiming.Rmd</code></div>
@@ -165,8 +165,8 @@
 <span><span class="co">## 6          0          0          0          0</span></span></code></pre>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">tail</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">MSdata</span><span class="op">)</span><span class="op">)</span> <span class="co"># why</span></span></code></pre></div>
-<pre><code><span><span class="co">## [1] "2022-12-14" "2022-12-15" "2022-12-16" "2022-12-17" "2022-12-18"</span></span>
-<span><span class="co">## [6] "2022-12-19"</span></span></code></pre>
+<pre><code><span><span class="co">## [1] "2022-12-28" "2022-12-29" "2022-12-30" "2022-12-31" "2023-01-01"</span></span>
+<span><span class="co">## [6] "2023-01-02"</span></span></code></pre>
 <p>We have to massage the column names to simplify programming with reocrd dates.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dates</span> <span class="op">=</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/as_date.html" class="external-link">as_date</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">MSdata</span><span class="op">[</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
