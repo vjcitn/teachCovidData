@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">teachCovidData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.8</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.9</span>
       </span>
     </div>
 
@@ -136,8 +136,58 @@
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <p>In this section we will work with time series of reports of new cases of COVID-19 infection.</p>
-<p>Another time series resource of interest records date, place and assigned cause <a href="https://data.cdc.gov/NCHS/Provisional-COVID-19-Deaths-by-Sex-and-Age/9bhg-hcku" class="external-link">COVID-19 related deaths</a>. At this time we will not be analyzing this data.</p>
-<p>[Add material]</p>
+<p>Another time series resource of interest records date, place and assigned cause of <a href="https://data.cdc.gov/NCHS/Provisional-COVID-19-Deaths-by-Sex-and-Age/9bhg-hcku" class="external-link">COVID-19 related deaths</a>. At this time we will not be analyzing this data.</p>
+</div>
+<div class="section level2">
+<h2 id="a-snapshot-of-data-from-usafacts">A snapshot of data from “USAfacts”<a class="anchor" aria-label="anchor" href="#a-snapshot-of-data-from-usafacts"></a>
+</h2>
+<p>The <code>usafacts_confirmed</code> function produces a table with rows corresponding to US counties and columns corresponding to dates. Entries of the table are counts of new COVID-19 cases.</p>
+<p>Here’s a quick look at the table:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://github.com/vjcitn/teachCovidData" class="external-link">teachCovidData</a></span><span class="op">)</span></span>
+<span><span class="va">cc</span> <span class="op">=</span> <span class="fu"><a href="../reference/usafacts_confirmed.html">usafacts_confirmed</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># confirmed cases by county</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="va">MSdata</span> <span class="op">=</span> <span class="va">cc</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">State</span><span class="op">==</span><span class="st">"MS"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">MSdata</span><span class="op">[</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">]</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##   countyFIPS           County Name State StateFIPS 2020-01-22 2020-01-23</span></span>
+<span><span class="co">## 1          0 Statewide Unallocated    MS        28          0          0</span></span>
+<span><span class="co">## 2      28001         Adams County     MS        28          0          0</span></span>
+<span><span class="co">## 3      28003        Alcorn County     MS        28          0          0</span></span>
+<span><span class="co">## 4      28005         Amite County     MS        28          0          0</span></span>
+<span><span class="co">## 5      28007        Attala County     MS        28          0          0</span></span>
+<span><span class="co">## 6      28009        Benton County     MS        28          0          0</span></span>
+<span><span class="co">##   2020-01-24 2020-01-25 2020-01-26 2020-01-27</span></span>
+<span><span class="co">## 1          0          0          0          0</span></span>
+<span><span class="co">## 2          0          0          0          0</span></span>
+<span><span class="co">## 3          0          0          0          0</span></span>
+<span><span class="co">## 4          0          0          0          0</span></span>
+<span><span class="co">## 5          0          0          0          0</span></span>
+<span><span class="co">## 6          0          0          0          0</span></span></code></pre>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">tail</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">MSdata</span><span class="op">)</span><span class="op">)</span> <span class="co"># why</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] "2022-12-14" "2022-12-15" "2022-12-16" "2022-12-17" "2022-12-18"</span></span>
+<span><span class="co">## [6] "2022-12-19"</span></span></code></pre>
+<p>We have to massage the column names to simplify programming with reocrd dates.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">dates</span> <span class="op">=</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/as_date.html" class="external-link">as_date</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">MSdata</span><span class="op">[</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">cumulative</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">MSdata</span><span class="op">[</span>,<span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span><span class="op">]</span>,<span class="fl">2</span>,<span class="va">sum</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">cumulative</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## 2020-01-22 2020-01-23 2020-01-24 2020-01-25 2020-01-26 2020-01-27 </span></span>
+<span><span class="co">##          0          0          0          0          0          0</span></span></code></pre>
+<p>We can now visualize cumulative case counts:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="va">mydf1</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">cumulative</span>, <span class="va">dates</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mydf1</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">dates</span>, y<span class="op">=</span><span class="va">cumulative</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"Cumulative Confirmed Covid cases in MS"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="B1Inftiming_files/figure-html/docum-1.png" width="700"></p>
+<p>“Incidence” refers to the rate at which new cases arise, frequently reported as number of cases (in a given period of time) per 100000 individuals at risk at the start of the interval.</p>
+<p>We use differences in cumulative counts to visualize time and size of outbreaks.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">incid</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/diff.html" class="external-link">diff</a></span><span class="op">(</span><span class="va">cumulative</span><span class="op">)</span></span>
+<span><span class="va">ndate</span> <span class="op">=</span> <span class="va">dates</span><span class="op">[</span><span class="op">-</span><span class="fl">1</span><span class="op">]</span></span>
+<span><span class="va">mydf2</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">incid</span>, <span class="va">ndate</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mydf2</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">ndate</span>, y<span class="op">=</span><span class="va">incid</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"New daily cases in MS"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="B1Inftiming_files/figure-html/lki-1.png" width="700"></p>
 </div>
   </div>
 
