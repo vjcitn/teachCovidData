@@ -123,7 +123,7 @@
       <h1 data-toc-skip>A1 Using ‘websites’ to present information on COVID-19</h1>
                         <h4 data-toc-skip class="author">Vincent J. Carey, stvjc at channing.harvard.edu</h4>
             
-            <h4 data-toc-skip class="date">January 04, 2023</h4>
+            <h4 data-toc-skip class="date">January 07, 2023</h4>
       
       <small class="dont-index">Source: <a href="http://github.com/vjcitn/teachCovidData/blob/HEAD/vignettes/A1websites.Rmd" class="external-link"><code>vignettes/A1websites.Rmd</code></a></small>
       <div class="hidden name"><code>A1websites.Rmd</code></div>
@@ -135,6 +135,85 @@
 <div class="section level2">
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
+<div class="section level3">
+<h3 id="basic-definitions">Basic definitions<a class="anchor" aria-label="anchor" href="#basic-definitions"></a>
+</h3>
+<p>A website is an information source specified by a Uniform Resource Locator (URL). See the <a href="https://en.wikipedia.org/wiki/URL" class="external-link">wikipedia entry</a> for a good overview of the URL concept.</p>
+<p>The website concept has been transformative in our understanding and practice of mass communication.</p>
+<ul>
+<li>Content added to the website with a given URL can be freely accessible, globally, to anyone with a cell phone or computer who knows the URL.</li>
+<li>Indexing systems like Google make it easy for individuals to find web-published content of interest.</li>
+<li>Open production tooling makes it possible to produce website contents of various kinds, including texts, audio segments, videos, data tables.</li>
+</ul>
+<p>The approach taken to web authoring and consumption to date appears to permit a high degree of <a href="https://en.wikipedia.org/wiki/Anonymity#Anonymity_on_the_Internet" class="external-link">anonymity</a> for both authors and consumers, leading to various controversies. There are also risks of bias in the operation of indexing systems that tilt search results in unfair ways. The topic of <a href="https://en.wikipedia.org/wiki/Search_neutrality" class="external-link">search neutrality</a> is worth investigation.</p>
+</div>
+<div class="section level3">
+<h3 id="on-this-web-content">On this web content<a class="anchor" aria-label="anchor" href="#on-this-web-content"></a>
+</h3>
+<p>The teachCovidData package is made available on the web through the GitHub source code management system, and uses the URL <code>https://github.com/vjcitn/teachCovidData</code>.</p>
+<p>A basic purpose of teachCovidData is to collect together disparate web-based sources of information on COVID-19, adding value through curation, software enhancement, and openness, so that students are better equipped to learn, critique, and ultimately teach important concepts about COVID-19 including concepts related to data science and information technology that can directly impact public health and the control of disease risks.</p>
+</div>
+<div class="section level3">
+<h3 id="technical-issues">Technical issues<a class="anchor" aria-label="anchor" href="#technical-issues"></a>
+</h3>
+<div class="section level4">
+<h4 id="hypertext">Hypertext<a class="anchor" aria-label="anchor" href="#hypertext"></a>
+</h4>
+<p>A basic insight underlying the web concerns the value of linking information sources together. Instead of repeating information or requiring a reader to find a related source through bibliographic reference, a <a href="https://en.wikipedia.org/wiki/Hyperlink" class="external-link">hyperlink</a> can be used to provide an option to the reader to “visit” another source to obtain more details or clarification of a word or phrase, or to “see” some other aspect of the source content. The “browser back button” allows return to source. Excursions from link to link are a common form of recreation and learning on the web.</p>
+<p>The most basic form hypertext composition uses the Hypertext Markup Language (<a href="https://en.wikipedia.org/wiki/HTML" class="external-link">HTML</a>). It is typical to use a more human-readable format like <a href="https://en.wikipedia.org/wiki/Markdown" class="external-link">markdown</a>, that can be translated to HTML using simple software tools.</p>
+</div>
+<div class="section level4">
+<h4 id="making-your-own-website">Making your own website<a class="anchor" aria-label="anchor" href="#making-your-own-website"></a>
+</h4>
+<p>A very simple approach to making a website is provided by GitHub. With any GitHub repo, the “pages” facility can be activated. Then an HTML document situated in the repo can be the target of a user-defined <code>github.io</code> URL.</p>
+</div>
+<div class="section level4">
+<h4 id="interactivity">Interactivity<a class="anchor" aria-label="anchor" href="#interactivity"></a>
+</h4>
+<p>When presenting data to a large audience, it is desirable to allow the audience to filter or vary aspects of the information in an exploratory way. Many tools have emerged that can simplify the design and deployment of interactive web resources. We will investigate the use of “shiny” in the Rstudio framework as one way of achieving data interaction for users of websites.</p>
+</div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="covid-19-resources">COVID-19 resources<a class="anchor" aria-label="anchor" href="#covid-19-resources"></a>
+</h2>
+<div class="section level3">
+<h3 id="default-display-of-google-results">Default display of Google results<a class="anchor" aria-label="anchor" href="#default-display-of-google-results"></a>
+</h3>
+<p>On 7 January 2023, entering “COVID-19” to the google search engine produced a special result:</p>
+<div class="figure">
+<img src="google2.jpg" alt="Google’s COVID-19 portal"><p class="caption">Google’s COVID-19 portal</p>
+</div>
+<p>Notice that it reports 10.25 billion results available. Broad topic areas are listed with “buttons” that can drive exploration.</p>
+</div>
+<div class="section level3">
+<h3 id="drilling-down-on-googles-stats">Drilling down on Google’s stats<a class="anchor" aria-label="anchor" href="#drilling-down-on-googles-stats"></a>
+</h3>
+<p>When I press the “Statistics” button, I see</p>
+<div class="figure">
+<img src="norfcases.jpg" alt="Local cases count, default"><p class="caption">Local cases count, default</p>
+</div>
+<p>Switching to the “Deaths” tab:</p>
+<div class="figure">
+<img src="norfDeaths7day.jpg" alt="Local death count"><p class="caption">Local death count</p>
+</div>
+<p>Notice that the data source is given as “New York Times”.</p>
+</div>
+<div class="section level3">
+<h3 id="cdc-regional-statistics">CDC regional statistics<a class="anchor" aria-label="anchor" href="#cdc-regional-statistics"></a>
+</h3>
+<p>The CDC <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home" class="external-link">COVID Data Tracker</a> provides options to identify states and counties of interest.</p>
+<div class="figure">
+<img src="cdcnorftop.jpg" alt="Initial view of Norfolk Co. MA, 7 Jan 2023"><p class="caption">Initial view of Norfolk Co. MA, 7 Jan 2023</p>
+</div>
+<p>Time series data are available on various metrics.</p>
+<div class="figure">
+<img src="cdcnorftimeseries.jpg" alt="Time series of Norfolk Co. MA, 7 Jan 2023"><p class="caption">Time series of Norfolk Co. MA, 7 Jan 2023</p>
+</div>
+<p>The above figures are snapshots frozen in time, to fix concepts. We can, in certain contexts, embed a view of the current content of a site of interest, using an “iframe”.</p>
+<iframe src="https://covid.cdc.gov/covid-data-tracker/#datatracker-home" title="Real time display of CDC Tracker" width="100%" height="600px">
+</iframe>
+</div>
 </div>
   </div>
 
