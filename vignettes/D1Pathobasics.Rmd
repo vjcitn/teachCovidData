@@ -28,5 +28,16 @@ how mutations to the virus facilitate immune escape.
 The calculator is [here](https://jbloomlab.github.io/SARS2_RBD_Ab_escape_maps/escape-calc/)
 and the relevant paper is [here](https://doi.org/10.1093/ve/veac021).
 
+# The WHO COVID-19 strain nomenclature
+
+Tracking emerging variants requires clear
+vocabulary for describing new strains.
+
+The World Health Organization's terminology and
+related practices are [here](https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/).
+
+The WHO site includes a link to comments by a [technical advisory
+group](https://www.who.int/groups/technical-advisory-group-on-sars-cov-2-virus-evolution/about) about [XBB](https://www.who.int/news/item/27-10-2022-tag-ve-statement-on-omicron-sublineages-bq.1-and-xbb) dated from October 2022.
+
 [Add material]
 

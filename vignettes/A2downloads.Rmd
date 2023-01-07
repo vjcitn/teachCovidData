@@ -101,3 +101,13 @@ dim(dat2)
 We have to be careful to avoid requesting unwieldy payloads from data providers.
 Modifications to URLs that support filtering of resources are defined in
 API documentation.
+
+# Using GitHub to distribute data
+
+New York City's Department of Health distributes data in a
+GitHub repository.  The instructions suggest cloning the repository
+to work with the data.
+
+For example
+information on variant prevalence is described [here](https://github.com/nychealth/coronavirus-data/tree/master/variants#variants) and
+instructions for use start in the README.md of the repository.
